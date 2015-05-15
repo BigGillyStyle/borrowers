@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function () {
     console.log('Creating a record');
-    this.store.createRecord('friend');
+    return this.store.createRecord('friend');
   },
   deactivate: function () {
     var model = this.modelFor('friends/new');

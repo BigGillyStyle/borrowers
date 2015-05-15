@@ -5,7 +5,7 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-export default Router.map(function () {
+Router.map(function () {
   this.resource('friends', function () {
     this.route('new');
     this.route('show', { path: ':friend_id' }, function() {
@@ -18,3 +18,5 @@ export default Router.map(function () {
     });
   });
 });
+
+export default Router;
