@@ -6,8 +6,9 @@ export default Ember.Route.extend({
       friend: this.modelFor('friends/show')
     });
   },
-  action: {
+  actions: {
     save: function() {
+      console.log('Saving article');
       var _this = this;
       var model = this.modelFor('articles/new');
 
@@ -16,6 +17,7 @@ export default Ember.Route.extend({
       });
     },
     cancel: function() {
+      console.log('Canceling new article');
       this.transitionTo('articles');
     }
   }
